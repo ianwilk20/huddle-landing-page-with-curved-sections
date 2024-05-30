@@ -8,12 +8,6 @@
   <link rel="stylesheet" href="./index.css">
   
   <title>Frontend Mentor | Huddle landing page with curved sections</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 
@@ -30,43 +24,57 @@
       <button class="btn-get-started">Get Started For Free</button>
       <img class="img-browser"/>
       <section class="sec-community-stats">
-        <section>
+        <section class="sec-community-stats-communites">
           <img class="icon-people"/>
           <p>1.4k+</p>
           <p>Communities Formed</p>
         </section>
-        <section>
+        <section class="sec-community-stats-messages">
           <img class="icon-message"/>
           <p>2.7m+</p>
-          <p>Messages Sent</p>
+          <p>Messages <br/>Sent</p>
         </section>
       </section>
-      <img>
     </section>
     <section class="sec-benefits">
+      <div class="sec-swirl-1">
+        <img class="img-1-bg-swirl">
+      </div>
       <section class="sec-benefits-grow-together">
         <img class="img-grow-together"/>
         <h2>Grow Together</h2>
         <p>Generate meaningful discussions with your audience and build a strong, loyal community. 
           Think of the insightful conversations you miss out on with a feedback form.</p>
       </section>
+      <div class="sec-swirl-2">
+        <img class="img-2-bg-swirl">
+      </div>
       <section class="sec-benefits-flowing-conversations">
         <img class="img-flowing-conversations"/>
         <h2>Flowing Conversations</h2>
         <p>You wouldn't paginate a conversation in real life, so why do it online? Our threads have 
           just-in-time loading for a more natural flow.</p>
       </section>
-      <section class="sec-benefits-grow-together">
-        <img class="img-grow-together"/>
+      <div class="sec-swirl-3">
+        <img class="img-3-bg-swirl">
+      </div>
+      <section class="sec-benefits-your-users">
+        <img class="img-grow-your-users"/>
         <h2>Your Users</h2>
         <p>It takes no time at all to integrate Huddle with your app's authentication solution. This means, 
           once signed in to your app, your users can start chatting immediately.</p>
       </section>
+      <div class="sec-swirl-4">
+        <img class="img-4-bg-swirl">
+      </div>
     </section>
     <section class="sec-ready-to-build">
       <h2>Ready To Build Your Community?</h2>
-      <button>Get Started For Free</button>
+      <button class="btn-get-started">Get Started For Free</button>
     </section>
+    <div class="sec-swirl-5">
+      <img class="img-5-bg-swirl">
+    </div>
   </main>
   <footer>
     <section class="sec-newsletter">
@@ -81,10 +89,14 @@
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla quam, hendrerit lacinia 
         vestibulum a, ultrices quis sem.</p>
       <section class="sec-contact-us-direct">
-        <img class="img-phone">
-        <p>Phone: +1-543-123-4567</p>
-        <img class="img-email">
-        <p>example@huddle.com</p>
+        <section>
+          <img class="img-phone">
+          <p>Phone: +1-543-123-4567</p>
+        </section>
+        <section>
+          <img class="img-email">
+          <p>example@company.com</p>
+        </section>
       </section>
       <section class="contact-us-socials">
         <button class="btn-facebook" onclick="window.open('https://www.facebook.com', 'blank');" aria-label="Link to our Facebook page"></button>
@@ -94,7 +106,7 @@
     </section>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="https://github.com/ianwilk20">Ian Wilkinson</a>.
     </p>
   </footer>
 </body>

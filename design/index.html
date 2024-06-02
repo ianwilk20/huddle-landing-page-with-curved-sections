@@ -10,12 +10,11 @@
   <title>Frontend Mentor | Huddle landing page with curved sections</title>
 </head>
 <body>
-
+  <header>
+    <img class="img-logo">
+    <button class="btn-try-it-free">Try it free</button>
+  </header>
   <main>
-    <section class="sec-header">
-      <img class="img-logo">
-      <button class="btn-try-it-free">Try it free</button>
-    </section>
     <section class="sec-community">
       <h1>Build The Community Your Fans Will Love</h1>
       <p>Huddle re-imagines the way we build communities. You have a voice, but so does 
@@ -32,7 +31,7 @@
         <section class="sec-community-stats-messages">
           <img class="icon-message"/>
           <p>2.7m+</p>
-          <p>Messages <br/>Sent</p>
+          <p><span>Messages </span><span>Sent</span></p>
         </section>
       </section>
     </section>
@@ -42,27 +41,33 @@
       </div>
       <section class="sec-benefits-grow-together">
         <img class="img-grow-together"/>
-        <h2>Grow Together</h2>
-        <p>Generate meaningful discussions with your audience and build a strong, loyal community. 
+        <section class="sec-benefits-text">
+          <h2>Grow Together</h2>
+          <p>Generate meaningful discussions with your audience and build a strong, loyal community. 
           Think of the insightful conversations you miss out on with a feedback form.</p>
+        </section>
       </section>
       <div class="sec-swirl-2">
         <img class="img-2-bg-swirl">
       </div>
       <section class="sec-benefits-flowing-conversations">
         <img class="img-flowing-conversations"/>
-        <h2>Flowing Conversations</h2>
-        <p>You wouldn't paginate a conversation in real life, so why do it online? Our threads have 
-          just-in-time loading for a more natural flow.</p>
+        <section class="sec-benefits-text">
+          <h2>Flowing Conversations</h2>
+          <p>You wouldn't paginate a conversation in real life, so why do it online? Our threads have 
+            just-in-time loading for a more natural flow.</p>
+        </section>
       </section>
       <div class="sec-swirl-3">
         <img class="img-3-bg-swirl">
       </div>
       <section class="sec-benefits-your-users">
         <img class="img-grow-your-users"/>
-        <h2>Your Users</h2>
-        <p>It takes no time at all to integrate Huddle with your app's authentication solution. This means, 
-          once signed in to your app, your users can start chatting immediately.</p>
+        <section class="sec-benefits-text">
+          <h2>Your Users</h2>
+          <p>It takes no time at all to integrate Huddle with your app's authentication solution. This means, 
+            once signed in to your app, your users can start chatting immediately.</p>
+        </section>
       </section>
       <div class="sec-swirl-4">
         <img class="img-4-bg-swirl">
@@ -77,31 +82,41 @@
     </div>
   </main>
   <footer>
-    <section class="sec-newsletter">
-      <h3>Newsletter</h3>
-      <p>To recieve tips on how to grow your community, sign up to our weekly newsletter. We’ll never 
-        send you spam or pass on your email address</p>
-      <input type="email" class="input-email"/>
-      <button class="btn-subscribe">Subscribe</button>
-    </section>
-    <section class="sec-contact-us">
-      <img class="img-large-logo">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla quam, hendrerit lacinia 
-        vestibulum a, ultrices quis sem.</p>
-      <section class="sec-contact-us-direct">
-        <section>
-          <img class="img-phone">
-          <p>Phone: +1-543-123-4567</p>
-        </section>
-        <section>
-          <img class="img-email">
-          <p>example@company.com</p>
+    <section class="sec-footer-wrapper">
+      <section class="sec-newsletter">
+        <h3>Newsletter</h3>
+        <p>To recieve tips on how to grow your community, sign up to our weekly newsletter. We’ll never 
+          send you spam or pass on your email address</p>
+        <section class="sec-newsletter-actions">
+          <form id="newsletter-form">
+            <section class="sec-newsletter-input">
+              <input id="email" type="text" role="text" class="input-email"/>
+              <p id="email-error" class="input-error"></p>
+              <p id="email-success" class="input-success">Thank you for subscribing to Huddle's newsletter!</p>
+            </section>
+            <button class="btn-subscribe">Subscribe</button>
+          </form>
         </section>
       </section>
-      <section class="contact-us-socials">
-        <button class="btn-facebook" onclick="window.open('https://www.facebook.com', 'blank');" aria-label="Link to our Facebook page"></button>
-        <button class="btn-instagram" onclick="window.open('https://www.instagram.com', 'blank');" aria-label="Link to our Instagram page"></button>
-        <button class="btn-twitter" onclick="window.open('https://www.twitter.com', 'blank');" aria-label="Link to our Twitter page"></button>
+      <section class="sec-contact-us">
+        <img class="img-large-logo">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla quam, hendrerit lacinia 
+          vestibulum a, ultrices quis sem.</p>
+        <section class="sec-contact-us-direct">
+          <section>
+            <img class="img-phone">
+            <p>Phone: +1-543-123-4567</p>
+          </section>
+          <section>
+            <img class="img-email">
+            <p>example@company.com</p>
+          </section>
+        </section>
+        <section class="contact-us-socials">
+          <button class="btn-facebook" onclick="window.open('https://www.facebook.com', 'blank');" aria-label="Link to our Facebook page"></button>
+          <button class="btn-instagram" onclick="window.open('https://www.instagram.com', 'blank');" aria-label="Link to our Instagram page"></button>
+          <button class="btn-twitter" onclick="window.open('https://www.twitter.com', 'blank');" aria-label="Link to our Twitter page"></button>
+        </section>
       </section>
     </section>
     <p class="attribution">
@@ -109,5 +124,40 @@
       Coded by <a href="https://github.com/ianwilk20">Ian Wilkinson</a>.
     </p>
   </footer>
+
 </body>
+
+<script>
+  let emailInput = document.getElementById("email");
+  let emailError = document.getElementById("email-error")
+  let emailSuccess = document.getElementById("email-success")
+
+  let newsletterForm = document.getElementById("newsletter-form")
+  newsletterForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if(emailInput.value === "") {
+      emailInput.classList.add('invalid')
+      emailError.innerText = 'Check your email please'
+      emailError.classList.add('show-error')
+    } else if (!RegExp(/[^@\s]+@[^@\s]+\.[^@\s]+/gm).test(emailInput.value.toLowerCase())) {
+      emailInput.classList.add('invalid')
+      emailError.innerText = 'Check your email please'
+      emailError.classList.add('show-error')
+    } else {
+      emailInput.classList.remove('invalid')
+      emailError.classList.remove('show-error')
+      setTimeout(function() {
+        completeNotify()
+      }, 500)
+    }
+  });
+
+  function completeNotify() {
+    emailSuccess.classList.add('show-success')
+    setTimeout(function() {
+      emailSuccess.classList.remove('show-success');
+      emailInput.value = ''
+    }, 4000)
+  }
+</script>
 </html>

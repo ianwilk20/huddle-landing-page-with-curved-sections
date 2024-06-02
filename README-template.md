@@ -63,6 +63,12 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 https://stackoverflow.com/questions/1875852/how-can-i-define-colors-as-variables-in-css
 
+https://stackoverflow.com/a/11079048
+- Images that were overflowing
+
+https://stackoverflow.com/a/67834009
+- For debugging overflow
+
 Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 
 To see how you can add code snippets, see below:
